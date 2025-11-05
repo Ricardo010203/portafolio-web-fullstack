@@ -131,14 +131,6 @@ const Hero = () => {
           >
             Pregúntale a la IA sobre mí
           </motion.button>
-          <motion.a 
-            href="#stats" 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors w-full max-w-md shadow-lg"
-          >
-            Ver estadísticas de conversaciones con la IA
-          </motion.a>
         </motion.div>
       </motion.div>
 
