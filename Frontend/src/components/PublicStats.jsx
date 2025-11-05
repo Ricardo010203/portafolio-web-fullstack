@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { FaComments, FaChartLine, FaRobot, FaTrophy, FaUsers, FaFire } from 'react-icons/fa'
 import { TrendingUp, Zap, Shield, MessageSquare, Activity } from 'lucide-react'
+import { API_URL } from '../config/api'
 import axios from 'axios'
 
 const PublicStats = () => {
@@ -18,7 +19,8 @@ const PublicStats = () => {
 
   const fetchPublicStats = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/api/stats/public')
+      const response = await axios.get(`${API_URL}/api/stats/public`)
+      //const response = await axios.get('http://localhost:3001/api/stats/public')
       setStats(response.data)
       setLoading(false)
     } catch (error) {

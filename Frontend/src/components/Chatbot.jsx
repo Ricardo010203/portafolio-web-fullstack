@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaComments, FaTimes, FaPaperPlane } from 'react-icons/fa'
 import axios from 'axios'
+import { API_URL } from '../config/api'
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -50,7 +51,8 @@ const ChatBot = () => {
     setIsLoading(true)
 
     try {
-      const response = await axios.post('http://localhost:3001/api/chat', {
+      const response = await axios.post(`${API_URL}/api/chat`, {
+      //const response = await axios.post('http://localhost:3001/api/chat', {
         message: userMessage,
         conversationId: conversationId
       })

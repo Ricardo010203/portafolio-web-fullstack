@@ -4,6 +4,7 @@ import {
   FaSignOutAlt, FaSearch, FaCalendar, FaChartBar, 
   FaDownload, FaComments, FaClock 
 } from 'react-icons/fa'
+import { API_URL } from '../config/api'
 import axios from 'axios'
 
 const AdminDashboard = ({ token, onLogout }) => {
@@ -31,7 +32,7 @@ const AdminDashboard = ({ token, onLogout }) => {
   const fetchAllLogs = async () => {
     setIsLoading(true)
     try {
-      const response = await axios.get('http://localhost:3001/api/logs/all', axiosConfig)
+      const response = await axios.get(`${API_URL}/api/logs/all`, axiosConfig)
       setLogs(response.data.conversaciones)
     } catch (error) {
       console.error('Error al cargar logs:', error)
@@ -43,7 +44,7 @@ const AdminDashboard = ({ token, onLogout }) => {
   const fetchStats = async () => {
     setIsLoading(true)
     try {
-      const response = await axios.get('http://localhost:3001/api/logs/stats', axiosConfig)
+      const response = await axios.get(`${API_URL}/api/logs/stats`, axiosConfig)
       setStats(response.data)
     } catch (error) {
       console.error('Error al cargar estadísticas:', error)
@@ -59,8 +60,8 @@ const AdminDashboard = ({ token, onLogout }) => {
     setIsLoading(true)
     try {
       const url = selectedDate 
-        ? `http://localhost:3001/api/logs/search?q=${searchQuery}&fecha=${selectedDate}`
-        : `http://localhost:3001/api/logs/search?q=${searchQuery}`
+        ? `${API_URL}/api/logs/search?q=${searchQuery}&fecha=${selectedDate}`
+        : `${API_URL}/api/logs/search?q=${searchQuery}`
       
       const response = await axios.get(url, axiosConfig)
       setSearchResults(response.data.resultados)
@@ -74,7 +75,7 @@ const AdminDashboard = ({ token, onLogout }) => {
   const handleDownload = async (fecha) => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/api/logs/download/${fecha}`,
+        `${API_URL}/api/logs/download/${fecha}`,
         { 
           ...axiosConfig,
           responseType: 'blob'

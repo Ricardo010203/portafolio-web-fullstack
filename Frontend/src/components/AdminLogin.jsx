@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaLock, FaUser } from 'react-icons/fa'
 import axios from 'axios'
+import { API_URL } from '../config/api'
 
 const AdminLogin = ({ onLoginSuccess }) => {
   const [credentials, setCredentials] = useState({
@@ -17,7 +18,8 @@ const AdminLogin = ({ onLoginSuccess }) => {
     setIsLoading(true)
 
     try {
-      const response = await axios.post('http://localhost:3001/api/auth/login', credentials)
+      const response = await axios.post(`${API_URL}/api/auth/login`, credentials)
+      //const response = await axios.post('http://localhost:3001/api/auth/login', credentials)
       
       if (response.data.success) {
         localStorage.setItem('adminToken', response.data.token)
