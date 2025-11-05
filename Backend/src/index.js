@@ -11,7 +11,15 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middlewares
-app.use(cors());
+//app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://portafolio-web-frontend-seven.vercel.app',
+    'https://portafolio-backend-53f1.onrender.com'
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // ========================================
