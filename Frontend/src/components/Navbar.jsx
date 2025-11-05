@@ -29,16 +29,16 @@ const Navbar = () => {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <a href="#" className="font-bold tracking-wide text-lg text-white">
+          <a href="#" className="font-bold tracking-wide text-lg ">
             JRV
           </a>
 
           {/* Links (desktop) */}
           <div className="hidden lg:flex items-center gap-8">
-            <a href="#sobre-mi" className="hover:opacity-80 transition text-white">Sobre mí</a>
-            <a href="#proyectos" className="hover:opacity-80 transition text-white">Proyectos</a>
-            <a href="#skills" className="hover:opacity-80 transition text-white">Skills</a>
-            <a href="#stats" className="hover:opacity-80 transition text-white">Estadísticas</a>
+            <a href="#sobre-mi" className="hover:opacity-80 transition ">Sobre mí</a>
+            <a href="#proyectos" className="hover:opacity-80 transition ">Proyectos</a>
+            <a href="#skills" className="hover:opacity-80 transition ">Skills</a>
+            <a href="#stats" className="hover:opacity-80 transition ">Estadísticas</a>
           </div>
 
           {/* Acciones derecha */}
@@ -49,7 +49,7 @@ const Navbar = () => {
                 href="https://github.com/Ricardo010203"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-md hover:opacity-80 transition text-white"
+                className="p-2 rounded-md hover:opacity-80 transition "
                 aria-label="GitHub"
                 title="GitHub"
               >
@@ -59,7 +59,7 @@ const Navbar = () => {
                 href="https://www.linkedin.com/in/JhojanVelasco"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-md hover:opacity-80 transition text-white"
+                className="p-2 rounded-md hover:opacity-80 transition "
                 aria-label="LinkedIn"
                 title="LinkedIn"
               >
@@ -71,7 +71,7 @@ const Navbar = () => {
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
-              className="lg:hidden inline-flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 text-white"
+              className="lg:hidden inline-flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 "
               aria-controls="mobile-menu"
               aria-expanded={open}
               aria-label="Abrir menú"
@@ -106,10 +106,10 @@ const Navbar = () => {
       >
         <div className="px-4 pb-4 sm:px-6">
           <div className="flex flex-col gap-3">
-            <a onClick={() => setOpen(false)} href="#sobre-mi" className="py-2 text-white">Sobre mí</a>
-            <a onClick={() => setOpen(false)} href="#proyectos" className="py-2 text-white">Proyectos</a>
-            <a onClick={() => setOpen(false)} href="#skills" className="py-2 text-white">Skills</a>
-            <a onClick={() => setOpen(false)} href="#estadisticas" className="py-2 text-white">Estadísticas</a>
+            <a onClick={() => setOpen(false)} href="#sobre-mi" className="py-2 ">Sobre mí</a>
+            <a onClick={() => setOpen(false)} href="#proyectos" className="py-2 ">Proyectos</a>
+            <a onClick={() => setOpen(false)} href="#skills" className="py-2 ">Skills</a>
+            <a onClick={() => setOpen(false)} href="#estadisticas" className="py-2 ">Estadísticas</a>
           </div>
 
           {/* Redes (mobile) */}
@@ -118,7 +118,7 @@ const Navbar = () => {
               href="https://github.com/Ricardo010203"
               target="_blank"
               rel="noreferrer"
-              className="p-2 rounded-md hover:opacity-80 transition text-white"
+              className="p-2 rounded-md hover:opacity-80 transition "
               aria-label="GitHub"
               title="GitHub"
             >
@@ -128,7 +128,7 @@ const Navbar = () => {
               href="https://www.linkedin.com/in/JhojanVelasco"
               target="_blank"
               rel="noreferrer"
-              className="p-2 rounded-md hover:opacity-80 transition text-white"
+              className="p-2 rounded-md hover:opacity-80 transition "
               aria-label="LinkedIn"
               title="LinkedIn"
             >
