@@ -27,17 +27,14 @@ const PublicStats = () => {
       console.error('Error al cargar estadísticas:', error)
       setLoading(false)
       setStats({
-        totalConversaciones: 12847,
+        totalConversaciones: 30,
         promedioRespuesta: '1.2s',
-        diasActivo: 487,
+        diasActivo: 30,
         satisfaccion: 98,
         temasPopulares: [
-          { nombre: 'Soporte Técnico', cantidad: 3421 },
-          { nombre: 'Consultas Generales', cantidad: 2876 },
-          { nombre: 'Gestión de OT', cantidad: 2145 },
-          { nombre: 'Estado de Pedidos', cantidad: 1893 },
-          { nombre: 'Información de Productos', cantidad: 1456 },
-          { nombre: 'Facturación', cantidad: 1056 }
+          { nombre: 'Experiencia', cantidad: 15 },
+          { nombre: 'Proyectos', cantidad: 7 },
+          { nombre: 'Habilidades', cantidad: 5 }
         ]
       })
     }
